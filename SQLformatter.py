@@ -9,7 +9,7 @@ keywords = ['select','create','drop', 'from','where','insert',' int',' varchar',
         'character_length','concat','field','format','cast','replace','locate','ucase','upper','min','max','sum','avg','count','exp',
         'floor','round','adddate','addtime','datediff','current_date','current_time','current_timestamp','sysdate','time_format',
         'to_days','coalesce','convert','current_user','isnull','ifnull','version','or','full join','check','auto','auto_increment',
-        'identity',' on','disk','bit','with']
+        'identity',' on','disk','bit','with','then','else']
 
 uppercase = lambda x: x.group(1).upper()
 re_replace = re.compile(r'\b({})\b'.format('|'.join(keywords)))
