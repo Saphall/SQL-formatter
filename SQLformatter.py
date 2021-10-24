@@ -18,10 +18,9 @@ def SQLformat(sqlFile):
         with open(sqlFile, 'w') as output_sqlFile:
             output_sqlFile.write(re_replace.sub(uppercase, content.lower()))
             print(
-                f'{SUCCESS}{BOLD}[+] Executed :{END} File Changed to correct SQL format!\n{SUCCESS}{BOLD}[+] SUCCESS !{END}')
+                f'{SUCCESS}{BOLD}[INFO]:{END} {FILE}{BOLD}"{sqlFile}"{END} --> {SUCCESS}done.{END}')
     except Exception as e:
-        print(f'{FAILURE}{BOLD}[-] Error:{END}', e,
-              f'\n{FAILURE}{BOLD}[-] FAILURE !{END}')
+        print(f'{FAILURE}{BOLD}[Error]:{END} {FILE}{BOLD}"{sqlFile}"{END} --> {FAILURE}', e)
 
 
 if __name__ == '__main__':
@@ -33,13 +32,16 @@ ___] |_\| |___    |    |__| |  \ |  | |  |  |   |  |___ |  \
                                                ~ From SAPHAL
            {END}''')
     try:
-        sqlFile = sys.argv[1]
-        if '.sql' in sqlFile:
-            SQLformat(sqlFile)
-        else:
-            print(
-                f'{FAILURE}{BOLD}[-] Error:{END} Please select SQL file only!\n{FAILURE}{BOLD}[-] FAILURE !{END}')
+        # print(len(sys.argv)-1)
+        for i in range (len(sys.argv)-1):
+            sqlFile = sys.argv[i+1]
+            # print(sqlFile)
+            if '.sql' in sqlFile:
+                SQLformat(sqlFile)
+            else:
+                print(
+                f'''{FAILURE}{BOLD}[Error]:{END} {FILE}{BOLD}"{sqlFile}"{END} --> {FAILURE}Select SQL file only.''')
+        print()
     except Exception as e:
-        print(f'{FAILURE}{BOLD}[-] Error:{END}', e,
-              f'\n{FAILURE}{BOLD}[-] FAILURE !{END}')
+        print(f'{FAILURE}{BOLD}[Error]:{END}{FAILURE}', e,'\n')
         exit(0)
