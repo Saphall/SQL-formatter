@@ -7,7 +7,7 @@
 +                                                        ~ From SAPHAL          +
 ```
 
-This python script helps to format SQL queries at first phase i.e. uppercase the all keywords used in the sql file.
+This python script helps to format SQL queries at first phase **i.e. uppercase** all the keywords used in the sql file.
 
 > ### Commands:
 
