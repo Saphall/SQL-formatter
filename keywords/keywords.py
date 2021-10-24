@@ -1,3 +1,6 @@
+"""
+List of keywords to change to uppercase.
+"""
 KEYWORDS = ['select','create','drop', 'from','where','insert',' int',' varchar',' date','database','table','into','values','group by',
         'desc','order by',' float',' char',' text',' number',' time',' timestamp','delete','if','exists','in','not',' datetime','add',
         'constraint','primary key','foreign key','constraints','alter','all','and','any','as','case','when','column','index','between',
